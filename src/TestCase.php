@@ -8,7 +8,7 @@ use tad\FunctionMocker\FunctionMocker;
 /**
  * @author OnTheGo Systems
  */
-abstract class OTGS_TestCase extends \PHPUnit_Framework_TestCase {
+abstract class TestCase extends \PHPUnit_Framework_TestCase {
 	/** @var \OTGS\PHPUnit\Tools\WP\Stubs */
 	protected $stubs;
 
@@ -27,7 +27,7 @@ abstract class OTGS_TestCase extends \PHPUnit_Framework_TestCase {
 	function tearDown() {
 		unset( $this->stubs );
 		\WP_Mock::tearDown();
-		\FunctionMocker::tearDown();
+		FunctionMocker::tearDown();
 		\Mockery::close();
 		parent::tearDown();
 	}
