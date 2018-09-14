@@ -1,6 +1,4 @@
 <?php
-namespace OTGS\PHPUnit\Tools;
-
 /**
  * @author OnTheGo Systems
  */
